@@ -30,7 +30,7 @@ class MissingPersonForm(FlaskForm):
     place_of_disappearance  = StringField('birthplace', validators=[DataRequired()])
     disappearance_details = TextAreaField('disappearance_details', validators=[DataRequired()])
     photo = FileField('image', validators=[
-        FileAllowed(['jpg', 'png'], 'Images only!'),
+        FileAllowed(['jpg', 'png', 'jpeg'], 'Images only!'),
         FileRequired()
     ])
 
